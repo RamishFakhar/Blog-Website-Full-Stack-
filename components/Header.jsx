@@ -2,6 +2,7 @@
 import { assets } from '@/Assets/assets'
 import axios from 'axios';
 import Image from 'next/image'
+import Link from 'next/link';
 import React, {useState} from 'react'
 import { toast } from 'react-toastify';
 
@@ -27,7 +28,9 @@ toast.error("Error")
     <div className='bg-gray-200 py-5 px-5 md:px-12 lg:px-28'>
     <div className='flex justify-between items-center'>
         <Image src={assets.logo} alt='' width={180}  className='w-{130px} sm:w-auto' />
-        <button className='flex items-center gap-2 font-medium py-1 px-3 sm:py-3 sm:px-6 border border-solid border-black shadow-[-7px_7px_0px_#000000] active:bg-gray-600 active:text-white '>Get Started <Image src={assets.arrow} alt='' /></button>
+        <Link href='/admin'>
+        <button className='flex items-center gap-2 font-medium py-1 px-3 sm:py-3 sm:px-6 border border-solid border-black shadow-[-7px_7px_0px_#000000] active:bg-gray-600 active:text-white '>Admin <Image src={assets.arrow} alt='' /></button>
+        </Link>
     </div>
     <div className='text-center my-8'>
 <h1 className='text-3xl sm:text-5xl font-medium'>Latest Blogs </h1>
